@@ -1,0 +1,200 @@
+<html>
+<body>
+<h1>AIあんとが相手の〇×ゲーム</h1>
+Turn<span class="grid">1</span><br>
+<span class="grid" type="button"onclick="Click1()">□</span>
+<span class="grid" type="button"onclick="Click2()">□</span>
+<span class="grid" type="button"onclick="Click3()">□</span><br>
+<span class="grid" type="button"onclick="Click4()">□</span>
+<span class="grid" type="button"onclick="Click5()">□</span>
+<span class="grid" type="button"onclick="Click6()">□</span><br>
+<span class="grid" type="button"onclick="Click7()">□</span>
+<span class="grid" type="button"onclick="Click8()">□</span>
+<span class="grid" type="button"onclick="Click9()">□</span><br>
+<span class="grid"></span>
+
+<script>
+
+let tile = document.getElementsByClassName("grid");
+let turn = 1;
+
+function Click1(){
+if(tile[1].innerHTML =="□"){
+if(turn%2 ==1){
+tile[1].innerHTML ="O";
+turn++;
+tile[0].innerHTML =turn;
+}
+else{
+tile[1].innerHTML ="X";
+turn++;
+tile[0].innerHTML =turn;
+}
+Hantei();
+Cpu();
+}
+}
+function Click2(){
+if(tile[2].innerHTML =="□"){
+if(turn%2 ==1){
+tile[2].innerHTML ="O";
+turn++;
+tile[0].innerHTML =turn;
+}
+else{
+tile[2].innerHTML ="X";
+turn++;
+tile[0].innerHTML =turn;
+}
+Hantei();
+Cpu();
+}
+}
+function Click3(){
+if(tile[3].innerHTML =="□"){
+if(turn%2 ==1){
+tile[3].innerHTML ="O";
+turn++;
+tile[0].innerHTML =turn;
+}
+else{
+tile[3].innerHTML ="X";
+turn++;
+tile[0].innerHTML =turn;
+}
+Hantei();
+Cpu();
+}
+}
+function Click4(){
+if(tile[4].innerHTML =="□"){
+if(turn%2 ==1){
+tile[4].innerHTML ="O";
+turn++;
+tile[0].innerHTML =turn;
+}
+else{
+tile[4].innerHTML ="X";
+turn++;
+tile[0].innerHTML =turn;
+}
+Hantei();
+Cpu();
+}
+}
+function Click5(){
+if(tile[5].innerHTML =="□"){
+if(turn%2 ==1){
+tile[5].innerHTML ="O";
+turn++;
+tile[0].innerHTML =turn;
+}
+else{
+tile[5].innerHTML ="X";
+turn++;
+tile[0].innerHTML =turn;
+}
+Hantei();
+Cpu();
+}
+}
+function Click6(){
+if(tile[6].innerHTML =="□"){
+if(turn%2 ==1){
+tile[6].innerHTML ="O";
+turn++;
+tile[0].innerHTML =turn;
+}
+else{
+tile[6].innerHTML ="X";
+turn++;
+tile[0].innerHTML =turn;
+}
+Hantei();
+Cpu();
+}
+}
+function Click7(){
+if(tile[7].innerHTML =="□"){
+if(turn%2 ==1){
+tile[7].innerHTML ="O";
+turn++;
+tile[0].innerHTML =turn;
+}
+else{
+tile[7].innerHTML ="X";
+turn++;
+tile[0].innerHTML =turn;
+}
+Hantei();
+Cpu();
+}
+}
+function Click8(){
+if(tile[8].innerHTML =="□"){
+if(turn%2 ==1){
+tile[8].innerHTML ="O";
+turn++;
+tile[0].innerHTML =turn;
+}
+else{
+tile[8].innerHTML ="X";
+turn++;
+tile[0].innerHTML =turn;
+}
+Hantei();
+Cpu();
+}
+}
+function Click9(){
+if(tile[9].innerHTML =="□"){
+if(turn%2 ==1){
+tile[9].innerHTML ="O";
+turn++;
+tile[0].innerHTML =turn;
+}
+else{
+tile[9].innerHTML ="X";
+turn++;
+tile[0].innerHTML =turn;
+}
+Hantei();
+Cpu();
+}
+}
+
+function Hantei(){
+if(tile[1].innerHTML =="O"&&tile[2].innerHTML =="O"&&tile[3].innerHTML =="O"){tile[10].innerHTML ="O 勝利";}
+if(tile[4].innerHTML =="O"&&tile[5].innerHTML =="O"&&tile[6].innerHTML =="O"){tile[10].innerHTML ="O 勝利";}
+if(tile[7].innerHTML =="O"&&tile[8].innerHTML =="O"&&tile[9].innerHTML =="O"){tile[10].innerHTML ="O 勝利";}
+if(tile[1].innerHTML =="O"&&tile[4].innerHTML =="O"&&tile[7].innerHTML =="O"){tile[10].innerHTML ="O 勝利";}
+if(tile[2].innerHTML =="O"&&tile[5].innerHTML =="O"&&tile[8].innerHTML =="O"){tile[10].innerHTML ="O 勝利";}
+if(tile[3].innerHTML =="O"&&tile[6].innerHTML =="O"&&tile[9].innerHTML =="O"){tile[10].innerHTML ="O 勝利";}
+if(tile[1].innerHTML =="O"&&tile[5].innerHTML =="O"&&tile[9].innerHTML =="O"){tile[10].innerHTML ="O 勝利";}
+if(tile[3].innerHTML =="O"&&tile[5].innerHTML =="O"&&tile[7].innerHTML =="O"){tile[10].innerHTML ="O 勝利";}
+if(tile[1].innerHTML =="X"&&tile[2].innerHTML =="X"&&tile[3].innerHTML =="X"){tile[10].innerHTML ="X 勝利";}
+if(tile[4].innerHTML =="X"&&tile[5].innerHTML =="X"&&tile[6].innerHTML =="X"){tile[10].innerHTML ="X 勝利";}
+if(tile[7].innerHTML =="X"&&tile[8].innerHTML =="X"&&tile[9].innerHTML =="X"){tile[10].innerHTML ="X 勝利";}
+if(tile[1].innerHTML =="X"&&tile[4].innerHTML =="X"&&tile[7].innerHTML =="X"){tile[10].innerHTML ="X 勝利";}
+if(tile[2].innerHTML =="X"&&tile[5].innerHTML =="X"&&tile[8].innerHTML =="X"){tile[10].innerHTML ="X 勝利";}
+if(tile[3].innerHTML =="X"&&tile[6].innerHTML =="X"&&tile[9].innerHTML =="X"){tile[10].innerHTML ="X 勝利";}
+if(tile[1].innerHTML =="X"&&tile[5].innerHTML =="X"&&tile[9].innerHTML =="X"){tile[10].innerHTML ="X 勝利";}
+if(tile[3].innerHTML =="X"&&tile[5].innerHTML =="X"&&tile[7].innerHTML =="X"){tile[10].innerHTML ="X 勝利";}
+}
+
+function Cpu(){
+while (turn%2 == 0){
+let r = 1 + Math.floor(Math.random()*9);
+if(tile[r].innerHTML =="□"){
+tile[r].innerHTML ="X";
+turn++;
+tile[0].innerHTML =turn;
+Hantei();
+}
+} 
+}
+
+</script>
+
+</body>
+</html>
